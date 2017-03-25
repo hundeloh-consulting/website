@@ -137,12 +137,14 @@
 			$emailInput.on('keyup', enableSubmitButton);
 			$messageText.on('keyup', enableSubmitButton);
 
-			var $submitButton = $('#Submit')
+			var $submitButton = $('#Submit');
 			$submitButton.click(function() {
 				if (grecaptcha.getResponse().length > 0) {
+					
 					var name = $nameInput.val();
 					var email = $emailInput.val();
 					$submitButton.prop('disabled', true);
+					$submitButton.addClass('loading');
 					$.post('https://formspree.io/julian@hundeloh-consulting.ch', {
 						_subject: 'Contact Form',
 						name: $nameInput.val(),
@@ -153,6 +155,7 @@
 						localStorage.setItem('Email', email);
 						$messageText.val('');
 						$submitButton.prop('disabled', false);
+						$submitButton.removeClass('loading');
 					})
 				}
 			});

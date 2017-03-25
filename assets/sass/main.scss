@@ -61,7 +61,7 @@
 		}
 	}
 
-	body, input, select, textarea {
+	body, input, select, textarea, .button {
 		color: _palette(fg);
 		font-family: _font(family);
 		font-size: 16pt;
@@ -302,7 +302,8 @@
 	input[type="password"],
 	input[type="email"],
 	select,
-	textarea {
+	textarea ,
+	.button {
 		@include vendor('appearance', 'none');
 		background: _palette(border-bg);
 		border-radius: _size(border-radius);
@@ -350,7 +351,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	select {
+	select,
+	.button {
 		height: _size(element-height);
 	}
 
@@ -870,6 +872,20 @@
 		text-decoration: none;
 		white-space: nowrap;
 
+		&>.loading {
+			display: none;
+		}
+
+		&.loading {
+			&>span {
+				display: none;
+			}
+
+			&>.loading {
+				display: inline-block;
+			}
+		}
+
 		&:hover {
 			border-color: _palette(accent1, bg);
 			color: _palette(accent1, bg) !important;
@@ -1326,7 +1342,7 @@
 
 		/* Basic */
 
-			body, input, select, textarea {
+			body, input, select, textarea, .button {
 				font-size: 12pt;
 			}
 

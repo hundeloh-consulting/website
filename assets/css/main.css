@@ -1206,7 +1206,7 @@ body {
     -ms-transition: none !important;
     transition: none !important; }
 
-body, input, select, textarea {
+body, input, select, textarea, .button {
   color: #a2a2a2;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 16pt;
@@ -1387,7 +1387,8 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select,
-textarea {
+textarea,
+.button {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -1405,13 +1406,15 @@ textarea {
   input[type="password"]:invalid,
   input[type="email"]:invalid,
   select:invalid,
-  textarea:invalid {
+  textarea:invalid,
+  .button:invalid {
     box-shadow: none; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="email"]:focus,
   select:focus,
-  textarea:focus {
+  textarea:focus,
+  .button:focus {
     border-color: #0099CC; }
 
 .select-wrapper {
@@ -1443,7 +1446,8 @@ textarea {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+select,
+.button {
   height: 2.75em; }
 
 textarea {
@@ -1811,6 +1815,21 @@ input[type="button"],
   text-align: center;
   text-decoration: none;
   white-space: nowrap; }
+  input[type="submit"] > .loading,
+  input[type="reset"] > .loading,
+  input[type="button"] > .loading,
+  .button > .loading {
+    display: none; }
+  input[type="submit"].loading > span,
+  input[type="reset"].loading > span,
+  input[type="button"].loading > span,
+  .button.loading > span {
+    display: none; }
+  input[type="submit"].loading > .loading,
+  input[type="reset"].loading > .loading,
+  input[type="button"].loading > .loading,
+  .button.loading > .loading {
+    display: inline-block; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -2255,7 +2274,7 @@ body.is-touch .poptrox-popup .closer {
 /* XLarge */
 @media screen and (max-width: 1800px) {
   /* Basic */
-  body, input, select, textarea {
+  body, input, select, textarea, .button {
     font-size: 12pt; } }
 /* Large */
 @media screen and (max-width: 1280px) {
