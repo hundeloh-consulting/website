@@ -147,7 +147,7 @@
 						_subject: 'Contact Form',
 						name: $nameInput.val(),
 						_replyto: $emailInput.val(),
-						message: $$messageText.val()
+						message: $messageText.val()
 					}).always(function() {
 						localStorage.setItem('Name', name);
 						localStorage.setItem('Email', email);
