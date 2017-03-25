@@ -143,7 +143,7 @@
 					var name = $nameInput.val();
 					var email = $emailInput.val();
 					$submitButton.prop('disabled', true);
-					$.post('https://formspree.io/hundeloh.consulting@gmail.com', {
+					$.post('https://formspree.io/julian@hundeloh-consulting.ch', {
 						_subject: 'Contact Form',
 						name: $nameInput.val(),
 						_replyto: $emailInput.val(),
