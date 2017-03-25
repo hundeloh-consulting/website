@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Website for https://www.hundeloh-consulting.com/",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jaulz@bitbucket.org/jaulz/website.git"
+  },
+  "author": "Julian Hundeloh",
+  "license": "CC-BY-3.0",
+  "homepage": "https://www.hundeloh-consulting.com/"
+}
