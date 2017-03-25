@@ -151,16 +151,25 @@
 						_replyto: $emailInput.val(),
 						message: $messageText.val()
 					}).always(function() {
-						localStorage.setItem('Name', name);
-						localStorage.setItem('Email', email);
+						try {
+							localStorage.setItem('Name', name);
+							localStorage.setItem('Email', email);
+						} catch (e) {
+							// Do nothing
+						}
 						$messageText.val('');
 						$submitButton.prop('disabled', false);
 						$submitButton.removeClass('loading');
 					})
 				}
 			});
-			$nameInput.val(localStorage.getItem('Name'));
-			$emailInput.val(localStorage.getItem('Email'));
+			
+			try {
+				$nameInput.val(localStorage.getItem('Name'));
+				$emailInput.val(localStorage.getItem('Email'));
+			} catch (e) {
+				// Do nothing
+			}
 
 		// Enable localScroll
 		$.localScroll({
