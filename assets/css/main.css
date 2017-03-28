@@ -2511,7 +2511,7 @@ body.is-touch .poptrox-popup .closer {
     background-repeat: repeat,							no-repeat;
     background-size: auto,							cover;
     bottom: 0;
-    left: auto;
+    left: 0;
     padding: 1em;
     position: fixed;
     text-align: center;
