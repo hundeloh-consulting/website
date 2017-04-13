@@ -1012,6 +1012,7 @@
     			bottom: -2px;
 				height: 2px;
 				background-color: _palette(accent1, bg);
+				-webkit-print-color-adjust: exact;
 				display: block;
 				content: ' ';
 			}
@@ -1742,13 +1743,13 @@
 				width: 100%;
 				max-width: 100%;
 
-				> section {
-					margin: ($size-header-pad / 2) 0 0 0;
-					padding: 0 0 ($size-header-pad / 2) 0;
+				header.major h2 {
+					font-size: 1.4em;
 				}
 
-				.rating-container .rating:after {
-					-webkit-print-color-adjust: exact;
+				> section {
+					margin: ($size-header-pad / 3) 0 0 0;
+					padding: 0 0 ($size-header-pad / 3) 0;
 				}
 
 				#SAP {

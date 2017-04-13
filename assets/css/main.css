@@ -1951,6 +1951,7 @@ input[type="button"],
       bottom: -2px;
       height: 2px;
       background-color: #0099CC;
+      -webkit-print-color-adjust: exact;
       display: block;
       content: ' '; }
     .rating-container .rating.expert:after {
@@ -2493,11 +2494,11 @@ body.is-touch .poptrox-popup .closer {
     padding: 0 3em;
     width: 100%;
     max-width: 100%; }
+    #main header.major h2 {
+      font-size: 1.4em; }
     #main > section {
-      margin: 1.5em 0 0 0;
-      padding: 0 0 1.5em 0; }
-    #main .rating-container .rating:after {
-      -webkit-print-color-adjust: exact; }
+      margin: 1em 0 0 0;
+      padding: 0 0 1em 0; }
     #main #SAP {
       page-break-after: always;
       border-bottom: 0 !important; }
