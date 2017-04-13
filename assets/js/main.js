@@ -158,7 +158,6 @@
 							// Do nothing
 						}
 						$messageText.val('');
-						$submitButton.prop('disabled', false);
 						$submitButton.removeClass('loading');
 					})
 				}
