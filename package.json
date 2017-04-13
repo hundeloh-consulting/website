@@ -14,5 +14,7 @@
   "author": "Julian Hundeloh",
   "license": "CC-BY-3.0",
   "homepage": "https://www.hundeloh-consulting.com/",
-  "dependencies": {}
+  "dependencies": {
+    "phantomjs": "^2.1.7"
+  }
 }
