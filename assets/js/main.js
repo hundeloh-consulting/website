@@ -141,6 +141,8 @@
 			$submitButton.click(function() {
 				if (grecaptcha.getResponse().length > 0) {
 					// Store name and email locally
+					var name = $nameInput.val();
+					var email = $emailInput.val();
 					try {
 						localStorage.setItem('Name', name);
 						localStorage.setItem('Email', email);
@@ -152,8 +154,7 @@
 					$submitButton.prop('disabled', true);
 					$submitButton.addClass('loading');
 					$submitButton.parents('form').submit();
-					/*var name = $nameInput.val();
-					var email = $emailInput.val();
+					/*
 					$.post('https://formspree.io/julian@hundeloh-consulting.ch', {
 						_subject: 'Contact Form',
 						name: $nameInput.val(),
