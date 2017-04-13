@@ -140,26 +140,29 @@
 			var $submitButton = $('#Submit');
 			$submitButton.click(function() {
 				if (grecaptcha.getResponse().length > 0) {
-					
-					var name = $nameInput.val();
-					var email = $emailInput.val();
+					// Store name and email locally
+					try {
+						localStorage.setItem('Name', name);
+						localStorage.setItem('Email', email);
+					} catch (e) {
+						// Do nothing
+					}
+
+					// Send
 					$submitButton.prop('disabled', true);
 					$submitButton.addClass('loading');
+					$submitButton.parents('form').submit();
+					/*var name = $nameInput.val();
+					var email = $emailInput.val();
 					$.post('https://formspree.io/julian@hundeloh-consulting.ch', {
 						_subject: 'Contact Form',
 						name: $nameInput.val(),
 						_replyto: $emailInput.val(),
 						message: $messageText.val()
 					}).always(function() {
-						try {
-							localStorage.setItem('Name', name);
-							localStorage.setItem('Email', email);
-						} catch (e) {
-							// Do nothing
-						}
 						$messageText.val('');
 						$submitButton.removeClass('loading');
-					})
+					})*/
 				}
 			});
 			

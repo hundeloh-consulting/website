@@ -476,10 +476,12 @@
 						</p>
 						<div class="row">
 							<div class="8u 12u$(small) no-print">
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/julian@hundeloh-consulting.ch">
+									<input type="hidden" name="_subject" value="Contact Form" />
+
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="Name" placeholder="Name" /></div>
-										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="Email" placeholder="Email" /></div>
+										<div class="6u$ 12u$(xsmall)"><input type="email" name="_replyto" id="Email" placeholder="Email" /></div>
 										<div class="12u$"><textarea name="message" id="Message" placeholder="Message" rows="4"></textarea></div>
 										<div class="12u$">
 											<div class="g-recaptcha" data-sitekey="6LedQAgUAAAAAPQ-GwKMRNGwrYEZfgIEvpXVMPql" data-callback="gotchaCallback" data-expired-callback="gotchaExpiredCallback"></div>
@@ -488,7 +490,7 @@
 								</form>
 								<ul class="actions">
 									<li>
-										<button type="submit" class="button" id="Submit" disabled>
+										<button class="button" id="Submit" disabled>
 											<span>Send message</span>
 											<span class="loading">
 												Sending message
