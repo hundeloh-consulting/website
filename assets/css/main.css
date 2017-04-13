@@ -2495,13 +2495,18 @@ body.is-touch .poptrox-popup .closer {
     width: 100%;
     max-width: 100%; }
     #main header.major h2 {
-      font-size: 1.4em; }
+      font-size: 1.7em; }
     #main > section {
       margin: 1em 0 0 0;
       padding: 0 0 1em 0; }
     #main #SAP {
       page-break-after: always;
       border-bottom: 0 !important; }
+    #main #getInTouch .details {
+      width: 100%; }
+      #main #getInTouch .details ul {
+        column-count: 2;
+        column-gap: 2em; }
 
   /* Footer */
   #footer {

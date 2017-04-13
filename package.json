@@ -4,7 +4,8 @@
   "description": "Website for https://www.hundeloh-consulting.com/",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/main.css"
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/main.css",
+    "pdf": "phantomjs pdf.js"
   },
   "repository": {
     "type": "git",
@@ -12,5 +13,6 @@
   },
   "author": "Julian Hundeloh",
   "license": "CC-BY-3.0",
-  "homepage": "https://www.hundeloh-consulting.com/"
+  "homepage": "https://www.hundeloh-consulting.com/",
+  "dependencies": {}
 }

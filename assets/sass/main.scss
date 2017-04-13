@@ -1744,7 +1744,7 @@
 				max-width: 100%;
 
 				header.major h2 {
-					font-size: 1.4em;
+					font-size: 1.7em;
 				}
 
 				> section {
@@ -1755,6 +1755,17 @@
 				#SAP {
 					page-break-after: always;
 					border-bottom: 0 !important;
+				}
+
+				#getInTouch {
+					.details {
+						width: 100%;
+
+						ul {
+							column-count: 2;
+							column-gap: 2em;
+						}
+					}
 				}
 			}
 
