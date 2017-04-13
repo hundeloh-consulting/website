@@ -153,7 +153,7 @@
 					// Send
 					$submitButton.prop('disabled', true);
 					$submitButton.addClass('loading');
-					$submitButton.parents('form').submit();
+					$('#Form').submit();
 					/*
 					$.post('https://formspree.io/julian@hundeloh-consulting.ch', {
 						_subject: 'Contact Form',
