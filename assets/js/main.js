@@ -158,7 +158,11 @@
 						name: $nameInput.val(),
 						email: $emailInput.val(),
 						message: $messageText.val()
-					}).always(function() {
+					})
+					.fail(function() {
+						window.location.href = "mailto:julian@hundeloh-consulting.ch?subject=&body=" + encodeURI($messageText.val());
+					})
+					.always(function() {
 						$submitButton.prop('disabled', false);
 						$messageText.val('');
 						$submitButton.removeClass('loading');
