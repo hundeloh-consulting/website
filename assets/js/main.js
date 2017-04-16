@@ -153,17 +153,16 @@
 					// Send
 					$submitButton.prop('disabled', true);
 					$submitButton.addClass('loading');
-					$('#Form').submit();
-					/*
-					$.post('https://formspree.io/julian@hundeloh-consulting.ch', {
-						_subject: 'Contact Form',
+					
+					$.post('https://script.google.com/macros/s/AKfycbzgLEp_u2A6PUtYYPu97_kTKt99LrHYHUrf_1yKFjJn84SslGw/exec', {
 						name: $nameInput.val(),
-						_replyto: $emailInput.val(),
+						email: $emailInput.val(),
 						message: $messageText.val()
 					}).always(function() {
+						$submitButton.prop('disabled', false);
 						$messageText.val('');
 						$submitButton.removeClass('loading');
-					})*/
+					})
 				}
 			});
 			
