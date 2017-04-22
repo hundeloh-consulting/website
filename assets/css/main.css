@@ -1322,6 +1322,9 @@ pre {
     padding: 1em 1.5em;
     overflow-x: auto; }
 
+@media screen {
+  .only-print {
+    display: none; } }
 @media print {
   .no-print, .no-print * {
     display: none !important; }
@@ -1733,8 +1736,6 @@ ul {
       position: relative; }
       ul.labeled-icons li:first-child {
         margin-top: 0; }
-      ul.labeled-icons li a {
-        color: inherit; }
       ul.labeled-icons li h3 {
         color: #b2b2b2;
         left: 0;
@@ -2457,7 +2458,8 @@ body.is-touch .poptrox-popup .closer {
     display: none; }
 
   a[href^="http://"]:after, a[href^="https://"]:after {
-    display: none; }
+    content: "" !important;
+    margin: 0 !important; }
 
   abbr {
     border-bottom: 0; }

@@ -46,7 +46,7 @@
 /* Basic */
 
 	@page { 
-		size:210mm 297mm; 
+		size: 210mm 297mm; 
 		margin: 0;
 	}
 
@@ -205,6 +205,12 @@
 			line-height: 1.75em;
 			padding: 1em 1.5em;
 			overflow-x: auto;
+		}
+	}
+
+	@media screen {
+		.only-print {
+			display: none;
 		}
 	}
 
@@ -750,10 +756,6 @@
 
 				&:first-child {
 					margin-top: 0;
-				}
-
-				a {
-					color: inherit;
 				}
 
 				h3 {
@@ -1684,7 +1686,8 @@
 			a {
 				&[href^="http://"]:after,
 				&[href^="https://"]:after {
-					display: none;
+					content: "" !important;
+					margin: 0 !important;
 				}
 			}
 
