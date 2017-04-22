@@ -2506,7 +2506,7 @@ body.is-touch .poptrox-popup .closer {
       width: 100%; }
       #main #getInTouch .details ul {
         column-count: 2;
-        column-gap: 2em; }
+        column-gap: 3em; }
 
   /* Footer */
   #footer {
