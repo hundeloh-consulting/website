@@ -2471,6 +2471,7 @@ body.is-touch .poptrox-popup .closer {
   /* Header */
   #header {
     background-attachment: scroll;
+    background-image: url("../../images/overlay.png"), url("../../images/background-print.jpg");
     background-position: top left,	center center;
     background-size: auto,		cover;
     left: auto;
