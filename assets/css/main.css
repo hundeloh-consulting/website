@@ -1218,7 +1218,6 @@ a {
   -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  border-bottom: dotted 1px;
   color: #0099CC;
   text-decoration: none; }
   a:hover {
@@ -1233,6 +1232,7 @@ a {
 
 abbr {
   border-bottom: 1px dotted;
+  text-decoration: none !important;
   cursor: help;
   position: relative; }
 
@@ -1911,12 +1911,21 @@ input[type="button"],
   .work-item h3 {
     font-size: 1em;
     margin: 0 0 0.125em 0; }
+  .work-item h4 {
+    font-size: 0.9em; }
+  .work-item h5 {
+    font-size: 0.8em; }
   .work-item p {
     font-size: 0.9em;
     line-height: 1.5em;
     margin: 0; }
     .work-item p strong {
       color: #0099CC; }
+  .work-item .highlighted {
+    text-transform: uppercase;
+    color: #0099CC;
+    font-weight: 100;
+    letter-spacing: 1px; }
 
 /* Rating */
 .rating-container {
@@ -2072,6 +2081,10 @@ input[type="button"],
     #main > section:last-child {
       border-bottom: 0;
       padding-bottom: 0; }
+  #main #history .work-item {
+    margin-bottom: 1rem; }
+    #main #history .work-item:last-child {
+      margin-bottom: 0; }
 
 /* Poptrox */
 @-moz-keyframes spin {
@@ -2402,14 +2415,7 @@ body.is-touch .poptrox-popup .closer {
     padding: 0.75em 1.5em 0.25em 1.5em; }
     #main > section {
       margin: 0 0 2.25em 0;
-      padding: 0 0 2.25em 0; }
-
-  /* Poptrox */
-  .poptrox-popup {
-    border-radius: 0; }
-    .poptrox-popup .nav-next:before,
-    .poptrox-popup .nav-previous:before {
-      margin-top: -1em; } }
+      padding: 0 0 2.25em 0; } }
 /* XSmall */
 @media screen and (max-width: 480px) {
   /* List */
@@ -2462,7 +2468,8 @@ body.is-touch .poptrox-popup .closer {
     margin: 0 !important; }
 
   abbr {
-    border-bottom: 0; }
+    border-bottom: 0;
+    text-decoration: none !important; }
 
   /* List */
   ul.icons li .icon {
@@ -2502,7 +2509,7 @@ body.is-touch .poptrox-popup .closer {
     #main > section {
       margin: 1em 0 0 0;
       padding: 0 0 1em 0; }
-    #main #SAP {
+    #main #SAP, #main #portfolio {
       page-break-after: always;
       border-bottom: 0 !important; }
     #main #getInTouch .details {

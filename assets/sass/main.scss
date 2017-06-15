@@ -71,7 +71,6 @@
 
 	a {
 		@include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
-		border-bottom: dotted 1px;
 		color: _palette(accent1, bg);
 		text-decoration: none;
 
@@ -94,6 +93,7 @@
 
 	abbr {
 		border-bottom: 1px dotted;
+		text-decoration: none !important;
 		cursor: help;
 		position: relative;
 	}
@@ -961,6 +961,14 @@
 			margin: 0 0 (_size(element-margin) * 0.25) 0;
 		}
 
+		h4 {
+			font-size: 0.9em;
+		}
+
+		h5 {
+			font-size: 0.8em;
+		}
+
 		p {
 			font-size: 0.9em;
 			line-height: 1.5em;
@@ -969,6 +977,13 @@
 			strong {
 				color: _palette(accent1, bg);
 			}
+		}
+
+		.highlighted {
+			text-transform: uppercase;
+			color: _palette(accent1, bg);
+			font-weight: 100;
+			letter-spacing: 1px;
 		}
 	}
 
@@ -1161,6 +1176,16 @@
 			&:last-child {
 				border-bottom: 0;
 				padding-bottom: 0;
+			}
+		}
+
+		#history {
+			.work-item {
+				margin-bottom: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -1570,19 +1595,6 @@
 				}
 			}
 
-		/* Poptrox */
-
-			.poptrox-popup {
-				border-radius: 0;
-
-				.nav-next,
-				.nav-previous {
-					&:before {
-						margin-top: -1em;
-					}
-				}
-			}
-
 	}
 
 /* XSmall */
@@ -1693,6 +1705,7 @@
 
 			abbr {
 				border-bottom: 0;
+				text-decoration: none !important;
 			}
 
 		/* List */
@@ -1756,7 +1769,7 @@
 					padding: 0 0 ($size-header-pad / 3) 0;
 				}
 
-				#SAP {
+				#SAP, #portfolio {
 					page-break-after: always;
 					border-bottom: 0 !important;
 				}
