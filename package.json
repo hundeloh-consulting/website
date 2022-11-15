@@ -16,6 +16,6 @@
   "homepage": "https://www.hundeloh-consulting.com/",
   "dependencies": {
     "phantomjs": "^2.1.7",
-    "sass": "1.12.0"
+    "sass": "1.56.1"
   }
 }
