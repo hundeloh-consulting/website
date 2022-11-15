@@ -41,7 +41,7 @@
 	));
 
 	$size-header-width: 35%;
-	$size-header-pad: 3em;
+	$size-header-pad: 0.5em;
 
 /* Basic */
 
@@ -224,6 +224,14 @@
     		border-bottom: 0;
 			color: _palette(fg);
 		}
+
+		.page-break {
+			page-break-after: always;
+		}
+
+		.page-break + * {
+			margin-top: 4rem;
+		}
 	}
 
 	.align-left {
@@ -285,7 +293,7 @@
 
 		&.major {
 			h2 {
-				font-size: 2em;
+				font-size: 1.5em;
 			}
 		}
 	}
@@ -990,6 +998,7 @@
 /* Rating */
 	.rating-container {
 		margin: 0 0 _size(element-margin) 0;
+		width: 100%;
 
 		a {
 			color: inherit;
@@ -1004,7 +1013,7 @@
 
 		li {
 			position: relative;
-			margin-bottom: 0.5rem;
+			margin-bottom: 1rem;
 			padding: 0;
 			display:inline-block;
 			width: 100%;
@@ -1112,7 +1121,7 @@
 		}
 
 		.image.avatar {
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			margin: (_size(element-margin) * 1) 0 (_size(element-margin) * 0.5) 0;
 			width: 6.25em;
 		}
 	}
@@ -1165,26 +1174,29 @@
 	#main {
 		margin-left: $size-header-width;
 		max-width: 50em + $size-header-pad;
-		padding: ($size-header-pad * 1) $size-header-pad ($size-header-pad * 2) $size-header-pad;
+		padding: ($size-header-pad * 1) 2rem ($size-header-pad * 2) 2rem;
 		width: calc(100% - #{$size-header-width});
 
 		> section {
-			border-bottom: solid 2px _palette(border);
-			margin: $size-header-pad 0 0 0;
+			/* border-bottom: solid 2px _palette(border); */
+			/* margin: $size-header-pad 0 0 0; */
 			padding: 0 0 $size-header-pad 0;
 
 			&:last-child {
 				border-bottom: 0;
-				padding-bottom: 0;
 			}
 		}
 
 		#history {
 			.work-item {
-				margin-bottom: 1rem;
+				margin: 0rem 0rem 1rem 0rem;
 
 				&:last-child {
 					margin-bottom: 0;
+				}
+
+				article {
+					padding: 0;
 				}
 			}
 		}
@@ -1381,7 +1393,7 @@
 	@include breakpoint(large) {
 
 		$size-header-width: 30%;
-		$size-header-pad: 3em;
+		$size-header-pad: 0.5em;
 
 		/* Header */
 
@@ -1392,7 +1404,6 @@
 					font-size: 1.25em;
 
 					br {
-						display: none;
 					}
 				}
 			}
@@ -1416,7 +1427,7 @@
 			#main {
 				margin-left: $size-header-width;
 				max-width: none;
-				padding: 0 $size-header-pad ($size-header-pad * 2) $size-header-pad;
+				padding: 2rem 2rem ($size-header-pad * 2) 2rem;
 				width: calc(100% - #{$size-header-width});
 			}
 
@@ -1426,7 +1437,7 @@
 
 	@include breakpoint(medium) {
 
-		$size-header-pad: 3em;
+		$size-header-pad: 0.5em;
 
 		/* Basic */
 
@@ -1508,7 +1519,7 @@
 
 			#main {
 				margin: 0;
-				padding: 0 $size-header-pad;
+				padding: 1rem 2rem;
 				width: 100%;
 			}
 
@@ -1587,10 +1598,10 @@
 		/* Main */
 
 			#main {
-				padding: ($size-header-pad * 0.5) $size-header-pad (($size-header-pad * 0.5) - _size(element-margin)) $size-header-pad;
+				padding: ($size-header-pad * 0.5) 1rem (($size-header-pad * 0.5) - _size(element-margin)) 1rem;
 
 				> section {
-					margin: 0 0 ($size-header-pad * 1.5) 0;
+					/*margin: 0 0 ($size-header-pad * 1.5) 0;*/
 					padding: 0 0 ($size-header-pad * 1.5) 0;
 				}
 			}
@@ -1681,7 +1692,7 @@
 
 	@media print {
 
-		$size-header-pad: 3em;
+		$size-header-pad: 0.5em;
 
 		/* Basic */
 
@@ -1756,7 +1767,7 @@
 		/* Main */
 			#main {
 				margin: 0;
-				padding: 0 $size-header-pad;
+				padding: 1rem 2rem;
 				width: 100%;
 				max-width: 100%;
 
@@ -1765,13 +1776,8 @@
 				}
 
 				> section {
-					margin: ($size-header-pad / 3) 0 0 0;
+					/* margin: ($size-header-pad / 3) 0 0 0; */
 					padding: 0 0 ($size-header-pad / 3) 0;
-				}
-
-				#SAP, #portfolio {
-					page-break-after: always;
-					border-bottom: 0 !important;
 				}
 
 				#getInTouch {
